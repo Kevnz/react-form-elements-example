@@ -12,9 +12,7 @@ import {
   OptionGroup,
   Radio,
   Form,
-  Button,
-  EmailInput,
-  UrlInput
+  Button
 } from "react-form-elements";
 
 const App = () => {

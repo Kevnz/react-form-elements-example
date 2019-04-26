@@ -1,58 +1,68 @@
 body {
-	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	color: #333;
-	margin: 10px;
-	padding: 10px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin: 10px;
+  padding: 10px;
 }
 
 a {
-	color: #08c;
-	text-decoration: none;
+  color: #08c;
+  text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .container {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 720px;
-	padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  padding: 1em;
 }
 
 .footer {
-	margin-top: 50px;
-	border-top: 1px solid #eee;
-	padding: 20px 0;
-	font-size: 12px;
-	color: #999;
+  margin-top: 50px;
+  border-top: 1px solid #eee;
+  padding: 20px 0;
+  font-size: 12px;
+  color: #999;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	color: #222;
-	font-weight: 100;
-	margin: 0.5em 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222;
+  font-weight: 100;
+  margin: 0.5em 0;
 }
 
 label {
-	color: #999;
-	display: inline-block;
-	font-size: 0.85em;
-	font-weight: bold;
-	margin: 1em 0;
+  color: #999;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: bold;
+  margin: 1em 0;
 }
 
 .hint {
-	margin: 15px 0;
-	font-style: italic;
-	color: #999;
+  margin: 15px 0;
+  font-style: italic;
+  color: #999;
 }
-
-.form-row_container input, .form-row_container select {
-	margin-left:10px;
+.rfe-form__row label {
+  display: inline-block;
+  min-width: 180px;
+  margin-right: 5px;
 }
-.form-row_container label span {
-	padding-left: 10px;
+.rfe-form__row input,
+.rfe-form__row select {
+  margin-left: 10px;
+}
+.rfe-form__row label span {
+  padding-left: 10px;
 }
