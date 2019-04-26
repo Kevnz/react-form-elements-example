@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 import {
+  Fieldset,
   TextBox,
   Checkbox,
   Range,
@@ -11,10 +12,13 @@ import {
   OptionGroup,
   Radio,
   Form,
-} from 'react-form-elements'
+  Button,
+  EmailInput,
+  UrlInput
+} from "react-form-elements";
 
 const App = () => {
-  const [values, setValues] = useState({})
+  const [values, setValues] = useState({});
 
   return (
     <div>
@@ -22,53 +26,57 @@ const App = () => {
       <Form
         name="testForm"
         onSubmit={e => {
-          setValues(e)
+          setValues(e);
           // do something with values
         }}
       >
-        <TextBox label="My Label" name="myTextBox" />
-        <Checkbox
-          label="My Checkbox"
-          initialValue="The True"
-          checked={false}
-          name="myCheckBox"
-        />
-        <Radio label="My Radio" name="myRadio" checked={false} />
-        <DateTime label="My Date" name="myDate" />
-        <Range label="My Range" name="myRange" />
-        <Telephone label="Telephone" name="myTelephone" />
-        <DateTime label="My DateTime" type="datetime" name="myDateTime" />
-        <DateTime label="My Month" type="month" name="myMonth" />
-        <DateTime label="My Week" type="week" name="myWeek" />
-        <DateTime
-          label="My DateTime"
-          type="datetime-local"
-          name="myDateTimeLocal"
-        />
-        <DateTime label="My Time" type="time" name="myTime" />
-        <DropDown
-          label="My Drop Down"
-          initialValue="2"
-          data-testid="dd1"
-          name="myDropDown"
-        >
-          <OptionGroup label="First Group">
-            <Option initialValue="1">First</Option>
-            <Option initialValue="2">Second</Option>
-            <Option initialValue="3" label="Third" />
-          </OptionGroup>
-          <OptionGroup label="Second Group">
-            <Option initialValue="11">Second First</Option>
-            <Option initialValue="12">Second Second</Option>
-            <Option initialValue="13" label="Second Third" />
-          </OptionGroup>
-          <OptionGroup label="Third Group">
-            <Option initialValue="21">Third First</Option>
-            <Option initialValue="22">Third Second</Option>
-            <Option initialValue="23" label="Third Third" />
-          </OptionGroup>
-        </DropDown>
-        <button onClick={e => {}}>Save</button>
+        <Fieldset legend="First Group">
+          <TextBox label="My Label" name="myTextBox" />
+          <Checkbox
+            label="My Checkbox"
+            initialValue="The True"
+            checked={false}
+            name="myCheckBox"
+          />
+          <Radio label="My Radio" name="myRadio" checked={false} />
+          <DateTime label="My Date" name="myDate" />
+          <Range label="My Range" name="myRange" />
+          <Telephone label="Telephone" name="myTelephone" />
+          <DateTime label="My DateTime" type="datetime" name="myDateTime" />
+        </Fieldset>
+        <Fieldset legend="Second Group">
+          <DateTime label="My Month" type="month" name="myMonth" />
+          <DateTime label="My Week" type="week" name="myWeek" />
+          <DateTime
+            label="My DateTime"
+            type="datetime-local"
+            name="myDateTimeLocal"
+          />
+          <DateTime label="My Time" type="time" name="myTime" />
+          <DropDown
+            label="My Drop Down"
+            initialValue="2"
+            data-testid="dd1"
+            name="myDropDown"
+          >
+            <OptionGroup label="First Group">
+              <Option initialValue="1">First</Option>
+              <Option initialValue="2">Second</Option>
+              <Option initialValue="3" label="Third" />
+            </OptionGroup>
+            <OptionGroup label="Second Group">
+              <Option initialValue="11">Second First</Option>
+              <Option initialValue="12">Second Second</Option>
+              <Option initialValue="13" label="Second Third" />
+            </OptionGroup>
+            <OptionGroup label="Third Group">
+              <Option initialValue="21">Third First</Option>
+              <Option initialValue="22">Third Second</Option>
+              <Option initialValue="23" label="Third Third" />
+            </OptionGroup>
+          </DropDown>
+        </Fieldset>
+        <Button onClick={e => {}}>Save</Button>
       </Form>
       <div data-testid="ref-out">
         <ul>
@@ -84,7 +92,7 @@ const App = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
